@@ -21,9 +21,6 @@ function createSharedNavigation() {
     a.textContent = link.text;
     a.id = link.id;
 
-    // Atualiza o histórico do navegador para evitar o back button
-    a.onclick = () => history.replaceState(null, "", link.href);
-
     // Marca o link ativo baseado na página atual
     if (
       window.location.pathname.includes(link.href) ||
